@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="assets/img/logo.png" rel="icon">
+        <link rel="stylesheet" href="assets/librerias/bootstrap.min.css"> <!--* Libraries Bootstrap -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<title> BMI Calculator </title>
+	</head>
+
+	<body>
+
+		<header>
+			<nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
+
+				<a class="navbar-brand" href="index.html" style="color: black;"> BMI Calculator </a>
+				<img src="assets/img/img-nav.gif" height="50" class="d-inline-block align-top" alt="mdb logo">  
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333" aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+	
+				<div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+					<ul class="navbar-nav ml-auto nav-flex-icons">
+						<li class="nav-item"> <a class="nav-link waves-effect waves-light" target="_blank" href="https://github.com/Alejandro-190107" style="color: black;"> <i class="fab fa-github-square"></i> </a> </li>
+						<li class="nav-item"> <a class="nav-link waves-effect waves-light" href="#" style="color: black;"> <i class="fab fa-linkedin"></i></a> </li>
+						<li class="nav-item"> <a class="nav-link waves-effect waves-light" target="_blank" href="#" style="color: black;"> <i class="fas fa-globe"></i></a> </li>
+	  				</ul>
+				</div>
+
+  			</nav>
+		</header>
+
+	<!-- beggin container -->
+    <div class="container">
+
+		<!-- beggin row -->
+		<div class="row">
+
+			<!-- beggin Column -->
+			<div class="col-md-4 mb-4 d-flex align-items-stretch">
+  
+	  			<!--Card-->
+	  			<div class="card">
+
+					<!--Card image-->
+					<div class="view">
+		  				<img src="assets/img/imc.png" class="card-img-top" alt="">
+		 				<a href="#">
+							<div class="mask rgba-white-slight"></div>
+		  				</a>
+					</div>
+					<!--end Card image-->
+
+					<!--Card content-->
+					<div class="card-body">
+		  				<h4 class="card-title"> Índice De Masa Corporal. </h4>
+		  				<p class="card-text"> El (IMC) es un número que se calcula con base en el peso y la estatura de la persona. 
+							Para la mayoría de las personas, el IMC es un indicador confiable de la gordura y se usa para identificar las categorías de peso que pueden 
+							llevar a problemas de salud. 
+						</p>
+					</div>
+  					<!--end Card content-->
+
+	  			</div>
+	  			<!-- end Card-->
+  
+			</div>
+			<!-- end Column -->
+
+
+			<!-- beggin Column -->
+			<div class="col-md-4 mb-4 d-flex align-items-stretch">		
+
+				<!--beggin Panel-->
+				<div class="card text-center">
+
+					<div class=" card-header success-color white-text">
+						<span class="title"> Calculadora IMC. </span>
+					</div>
+
+					<!-- beggin card-body -->
+					<div class="card-body">
+						
+						<p class="card-title"> Proporciona los datos que se te piden para calcular tu IMC. </p><hr>
+						<!-- beggin row -->
+						<div class="row mb-4">
+
+							<div class="col">
+								<div class="form-outline">
+									<div class="input-group">
+										<input type="number" id="height" class="form-control" />
+									</div>
+									<label class="form-label"> Altura(cm) </label>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="form-outline">
+									<div class="input-group">
+										<input type="number" id="weight" class="form-control" />
+									</div>
+									<label class="form-label"> Peso(kg) </label>
+								</div>
+							</div>
+
+						</div>
+						<!-- end row -->
+
+						<!-- beggin row -->
+						<div class="row mb-4">
+
+							<div class="col">
+								<div class="input-group">
+									<button type="submit" class="btn btn-success btn-sm btn-block mb-4" id="calculate"> Calcular </button>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="input-group">
+									<button type="reset" class="btn btn-danger btn-sm btn-block mb-4" id="btnDelete"> Restablecer </button>
+								</div>
+							</div>
+
+						</div>
+						<!-- end row --><hr>
+
+						<!-- beggin row -->
+						<div class="row mb-4">
+
+							<div class="col">
+								<spam class="alert-link" id="result"> </spam>
+							</div>
+
+						</div>
+						<!-- end row -->
+
+					</div>
+					<!-- end card-body -->
+
+				  </div>
+				<!--end Panel-->
+				
+		  	</div>
+		  	<!-- end Column -->
+
+
+			<!-- beggin Column -->
+			<div class="col-md-4 mb-4 d-flex align-items-stretch">
+
+				<!--beggin Panel-->
+				<div class="card text-center">
+
+					<div class=" card-header success-color white-text">
+						<span class="title"> Tabla De Valores IMC. </span>
+					</div>
+
+					<!-- beggin card-body -->
+					<div class="card-body">
+
+						<!-- beggin table -->
+						<table class="table w-auto">
+
+							<thead class="black white-text">
+								<tr>
+									<th scope="col"> Composición Corporal.	</th>
+									<th scope="col"> IMC </th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<th scope="row"> Bajo de peso igual o menor. </th>
+									<td> Menos de 18.4 </td>
+								</tr>
+
+								<tr>
+									<th scope="row"> Normal. </th>
+									<td> De 18.5 a 24.9 </td>
+								</tr>
+
+								<tr>
+									<th scope="row"> Sobrepeso. </th>
+									<td> De 25 a 29.9 </td>
+								</tr>
+
+								<tr>
+									<th scope="row"> Obesidad. </th>
+									<td> Más de 30.0 </td>
+								</tr>
+							</tbody>
+
+						</table>
+						<!-- end table --><hr>
+
+					</div>
+					<!-- end card-body -->
+
+				  </div>
+				<!--end Panel-->
+  
+
+		  	</div>
+		  	<!-- end Column -->
+
+			
+
+  		</div>
+  		<!-- end row -->
+
+	</div>
+	<!-- end container -->
+		
+		<footer class="page-footer font-small blue fixed-bottom">
+			<div class="footer-copyright text-center text-light py-3"> <b style="color: black;" ><i class="far fa-copyright"></i> 2023 Creado Por Alejandro López</b></div>
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script><!-- Sweet-Alert -->
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+		<script src="assets/librerias/jquery-3.6.0.min.js"></script> <!--! Libraries jquery -->
+        <script src="assets/librerias/popper.min.js"></script> <!--! Libraries Icons -->
+        <script src="assets/librerias/bootstrap.min.js"></script> <!--! Libraries Bootstrap -->
+        <script src="https://kit.fontawesome.com/a81368914c.js"></script> <!--! Libraries Font Of fontawesome -->
+        <script defer src="assets/js/main.js"></script>
+
+	</body>
+</html>
